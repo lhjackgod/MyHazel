@@ -13,11 +13,13 @@ project "MyHazel"
     language "C++"
     targetdir ("bin/" ..outputdir.. "/%{prj.name}")
     objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
-
+    pchheader "hzpch.h"
+	pchsource "MyHazel/src/hzpch.cpp"
     files{
         "{%prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp"
     }
+    
     includedirs{
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"

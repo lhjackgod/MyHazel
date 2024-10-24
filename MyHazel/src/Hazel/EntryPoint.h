@@ -1,5 +1,4 @@
 #pragma once
-
 #ifdef HZ_PLATFORM_WINDOWS
 extern Hazel::Application* Hazel::createApplication();
 int main(int arg, char** argv) {

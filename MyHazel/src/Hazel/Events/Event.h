@@ -1,6 +1,5 @@
 #pragma once
-#include <functional>
-
+#include "hzpch.h"
 namespace Hazel {
 	enum class EventType
 	{
