@@ -38,14 +38,15 @@ namespace Hazel {
 
 	class EventDispatcher {
 	public:
-		EventDispatcher(Event& event) :m_Event(m_Event)
+		EventDispatcher(Event& event) :m_Event(event)
 		{
 
 		}
 		template<typename T, typename F>
 		bool Dispatch(const F& func) {
 			if (m_Event.GetEventType() == T::GetStaticType()) {
-				m_Event |= func(static_cast<T&>(m_Event));
+				
+				m_Event.Handled |= func(static_cast<T&>(m_Event));
 				return true;
 			}
 			return false;

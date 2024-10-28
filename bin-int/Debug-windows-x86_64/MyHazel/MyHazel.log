@@ -1,3 +1,4 @@
 ﻿cl : 命令行 warning D9025: 正在重写“/MTd”(用“/MDd”)
   WindowsWindow.cpp
+    正在创建库 ..\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib 和对象 ..\bin\Debug-windows-x86_64\MyHazel\MyHazel.exp
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.dll
