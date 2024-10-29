@@ -14,6 +14,7 @@ include "MyHazel/vendor/GLFW"
 include "MyHazel/vendor/GLAD"
 include "MyHazel/vendor/imgui"
 
+
 project "MyHazel"
     location "MyHazel"
     kind "SharedLib"
