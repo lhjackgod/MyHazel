@@ -12,7 +12,10 @@ public:
 };
 class Sanbox : public Hazel::Application {
 public:
-	Sanbox() { PushLayer(new ExampleLayer()); }
+	Sanbox() { 
+		PushLayer(new ExampleLayer());
+		PushOverLayer(new Hazel::ImGuiLayer());
+	}
 	~Sanbox() { printf("delete Sanbox\n"); }
 
 };
