@@ -1,4 +1,9 @@
 ﻿cl : 命令行 warning D9025: 正在重写“/MTd”(用“/MDd”)
-  WindowsWindow.cpp
-    正在创建库 ..\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib 和对象 ..\bin\Debug-windows-x86_64\MyHazel\MyHazel.exp
+  Application.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Layer.h(16,15): warning C4251: “Hazel::Layer::m_DebugName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Hazel::Layer”的客户端使用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4871): message : 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(19,23): warning C4251: “Hazel::LayerStack::m_Layers”: class“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”需要有 dll 接口由 class“Hazel::LayerStack”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(16): message : 参见“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Application.h(20,27): warning C4251: “Hazel::Application::m_Window”: class“std::unique_ptr<Hazel::Window,std::default_delete<Hazel::Window>>”需要有 dll 接口由 class“Hazel::Application”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Application.h(20): message : 参见“std::unique_ptr<Hazel::Window,std::default_delete<Hazel::Window>>”的声明
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.dll
