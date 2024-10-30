@@ -11,6 +11,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "MyHazel/vendor/GLFW/include"
 IncludeDir["GLAD"] = "MyHazel/vendor/GLAD/include"
 IncludeDir["imgui"] = "MyHazel/vendor/imgui"
+IncludeDir["glm"] = "MyHazel/vendor/glm"
 include "MyHazel/vendor/GLFW"
 include "MyHazel/vendor/GLAD"
 include "MyHazel/vendor/imgui"
@@ -28,6 +29,8 @@ project "MyHazel"
     files{
         "{%prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/glm/glm/**.hpp",
+        "%{prj.name}/vendor/glm/glm/**.inl"
     }
     
     includedirs{
@@ -35,7 +38,8 @@ project "MyHazel"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.GLAD}",
-        "%{IncludeDir.imgui}"
+        "%{IncludeDir.imgui}",
+        "%{IncludeDir.glm}"
     }
     links {
         "ImGui",
@@ -84,7 +88,8 @@ project "SandBox"
         -- 同样包含spdlog头文件
         includedirs{
             "MyHazel/vendor/spdlog/include",
-            "MyHazel/src"
+            "MyHazel/src",
+            "%{IncludeDir.glm}"
         }
         -- 引用hazel
         links{
