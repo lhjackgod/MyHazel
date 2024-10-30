@@ -21,6 +21,7 @@ project "MyHazel"
     location "MyHazel"
     kind "SharedLib"
     language "C++"
+    cppdialect "C++17"
     staticruntime "off"
     targetdir ("bin/" ..outputdir.. "/%{prj.name}")
     objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
@@ -32,7 +33,9 @@ project "MyHazel"
         "%{prj.name}/vendor/glm/glm/**.hpp",
         "%{prj.name}/vendor/glm/glm/**.inl"
     }
-    
+    defines{
+        "_CRT_SECURE_NO_WARNINGS"
+    }
     includedirs{
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
@@ -48,7 +51,7 @@ project "MyHazel"
         "opengl32.lib"
     }
     filter "system:windows"
-        cppdialect "C++17"
+
         systemversion "latest"
 
         defines{
@@ -56,27 +59,29 @@ project "MyHazel"
             "HZ_BUILD_DLL",
             "GLFW_INCLUDE_NONE"
         }
-        postbuildcommands{
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" ..outputdir.. "/SandBox")
-        }
+        postbuildcommands
+		{
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/SandBox/\"")
+		}
     filter "configurations:Debug"
         defines "HZ_DEBUG"
         
         runtime "Debug"
-        symbols "On"
+        symbols "on"
     filter "configurations:Release"
         defines "HZ_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
     filter "configurations:Dist"
         defines "HZ_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
 project "SandBox"
         location "SandBox"
         kind "ConsoleApp"
         language "C++"
+        cppdialect "C++17"
         staticruntime "off"
         targetdir ("bin/" .. outputdir .. "/%{prj.name}")
         objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -89,7 +94,8 @@ project "SandBox"
         includedirs{
             "MyHazel/vendor/spdlog/include",
             "MyHazel/src",
-            "%{IncludeDir.glm}"
+            "%{IncludeDir.glm}",
+            "MyHazel/vendor"
         }
         -- 引用hazel
         links{
@@ -97,7 +103,7 @@ project "SandBox"
         }
 
         filter "system:windows"
-            cppdialect "C++17"
+
             
             systemversion "latest"
 
@@ -108,15 +114,15 @@ project "SandBox"
         filter "configurations:Debug"
             defines "HZ_DEBUG"
             runtime "Debug"
-            symbols "On"
+            symbols "on"
 
         filter "configurations:Release"
             defines "HZ_RELEASE"
             runtime "Release"
-            optimize "On"
+            optimize "on"
 
         filter "configurations:Dist"
             defines "HZ_DIST"
             runtime "Release"
-            optimize "On"
+            optimize "on"
 

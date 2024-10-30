@@ -1,5 +1,6 @@
 #include <Hazel.h>
 #include <stdio.h>
+
 class ExampleLayer : public Hazel::Layer {
 public:
 	ExampleLayer() : Layer("example") {}
@@ -19,12 +20,13 @@ public:
 			HZ_TRACE("{0}", (char)e.GetKeyCode());
 		}
 	}
+	
 };
 class Sanbox : public Hazel::Application {
 public:
 	Sanbox() { 
 		PushLayer(new ExampleLayer());
-		PushOverLayer(new Hazel::ImGuiLayer());
+		//PushOverLayer(new Hazel::ImGuiLayer());
 	}
 	~Sanbox() { printf("delete Sanbox\n"); }
 
