@@ -1,1 +1,50 @@
-﻿  MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.dll
+﻿  hzpch.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Log.h(13,42): warning C4251: “Hazel::Log::s_CoreLogger”: class“std::shared_ptr<spdlog::logger>”需要有 dll 接口由 class“Hazel::Log”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\vendor\spdlog\include\spdlog\details\registry.h(33): message : 参见“std::shared_ptr<spdlog::logger>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Log.h(14,42): warning C4251: “Hazel::Log::s_ClientLogger”: class“std::shared_ptr<spdlog::logger>”需要有 dll 接口由 class“Hazel::Log”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\vendor\spdlog\include\spdlog\details\registry.h(33): message : 参见“std::shared_ptr<spdlog::logger>”的声明
+  Application.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Layer.h(16,15): warning C4251: “Hazel::Layer::m_DebugName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Hazel::Layer”的客户端使用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4871): message : 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(19,23): warning C4251: “Hazel::LayerStack::m_Layers”: class“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”需要有 dll 接口由 class“Hazel::LayerStack”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(16): message : 参见“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Application.h(22,27): warning C4251: “Hazel::Application::m_Window”: class“std::unique_ptr<Hazel::Window,std::default_delete<Hazel::Window>>”需要有 dll 接口由 class“Hazel::Application”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Application.h(22): message : 参见“std::unique_ptr<Hazel::Window,std::default_delete<Hazel::Window>>”的声明
+  ImGuiLayer.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Layer.h(16,15): warning C4251: “Hazel::Layer::m_DebugName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Hazel::Layer”的客户端使用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4871): message : 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(19,23): warning C4251: “Hazel::LayerStack::m_Layers”: class“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”需要有 dll 接口由 class“Hazel::LayerStack”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(16): message : 参见“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Application.h(22,27): warning C4251: “Hazel::Application::m_Window”: class“std::unique_ptr<Hazel::Window,std::default_delete<Hazel::Window>>”需要有 dll 接口由 class“Hazel::Application”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Application.h(22): message : 参见“std::unique_ptr<Hazel::Window,std::default_delete<Hazel::Window>>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\ImGui\ImGuiLayer.cpp(19,80): warning C4244: “参数”: 从“unsigned int”转换到“float”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\ImGui\ImGuiLayer.cpp(19,51): warning C4244: “参数”: 从“unsigned int”转换到“float”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\ImGui\ImGuiLayer.cpp(130,60): warning C4244: “参数”: 从“unsigned int”转换到“float”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\ImGui\ImGuiLayer.cpp(130,41): warning C4244: “参数”: 从“unsigned int”转换到“float”，可能丢失数据
+  Layer.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Layer.h(16,15): warning C4251: “Hazel::Layer::m_DebugName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Hazel::Layer”的客户端使用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4871): message : 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+  LayerStack.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Layer.h(16,15): warning C4251: “Hazel::Layer::m_DebugName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Hazel::Layer”的客户端使用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4871): message : 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(19,23): warning C4251: “Hazel::LayerStack::m_Layers”: class“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”需要有 dll 接口由 class“Hazel::LayerStack”的客户端使用
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\LayerStack.h(16): message : 参见“std::vector<Hazel::Layer *,std::allocator<Hazel::Layer *>>”的声明
+  Log.cpp
+  ImGuiOpenGLRenderer.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp(48): warning C4603: “_CRT_SECURE_NO_WARNINGS”: 未定义宏或在预编译头使用后定义发生改变
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp(48): message : 将宏添加到预编译头中，而不是在此处定义
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp(50): message : 使用预编译头
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp(89,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp(90,5): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp(320,5): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  WindowsWindow.cpp
+  正在生成代码...
+  MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.dll
