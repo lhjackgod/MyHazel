@@ -1,5 +1,6 @@
 #pragma once
 #include "Hazel/Window.h"
+#include "Hazel/Render/GraphicsContex.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 namespace Hazel {
@@ -20,6 +21,7 @@ namespace Hazel {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContex* m_Contex;
 		struct WindowData
 		{
 			std::string Title;

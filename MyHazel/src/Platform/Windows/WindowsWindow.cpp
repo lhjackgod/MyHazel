@@ -1,4 +1,5 @@
 #include "hzpch.h"
+#include "Platform/OpenGL/OpenGLContex.h"
 #include "WindowsWindow.h"
 #include "Hazel/Events/ApplicationEvent.h"
 #include "Hazel/Events/KeyEvent.h"
@@ -19,7 +20,7 @@ namespace Hazel {
 	}
 	void WindowsWindow::OnUpdate()
 	{
-		glfwSwapBuffers(m_Window);
+		m_Contex->SwapBuffers();
 		glfwPollEvents();
 	}
 	void WindowsWindow::SetVSync(bool enabled)
@@ -49,10 +50,8 @@ namespace Hazel {
 			is_GLFWInitialized = true;
 		}
 		m_Window = glfwCreateWindow(static_cast<int>(m_Data.Width), static_cast<int>(m_Data.Height), m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		HZ_CORE_ASSERT(status, "Failed to initialize Glad!");
-		
+		m_Contex = new OpenGLContex(m_Window);
+		m_Contex->Init();
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height) {
