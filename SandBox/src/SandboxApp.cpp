@@ -1,11 +1,10 @@
 #include <Hazel.h>
 #include <stdio.h>
-
+#include <imgui/imgui.h>
 class ExampleLayer : public Hazel::Layer {
 public:
 	ExampleLayer() : Layer("example") {}
 	void OnUpdate() override {
-		HZ_INFO("ExampleLayer::Update");
 		if (Hazel::Input::IsKeyPressed(HZ_KEY_TAB)) {
 			HZ_TRACE("Table key is pressed");
 		}
@@ -20,7 +19,12 @@ public:
 			HZ_TRACE("{0}", (char)e.GetKeyCode());
 		}
 	}
-	
+	virtual void onImGuiRender() override
+	{
+		ImGui::Begin("test");
+		ImGui::Text("hello world");
+		ImGui::End();
+	}
 };
 class Sanbox : public Hazel::Application {
 public:

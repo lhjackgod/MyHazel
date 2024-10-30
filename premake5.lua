@@ -19,10 +19,10 @@ include "MyHazel/vendor/imgui"
 
 project "MyHazel"
     location "MyHazel"
-    kind "SharedLib"
+    kind "StaticLib"
     language "C++"
     cppdialect "C++17"
-    staticruntime "off"
+    staticruntime "on"
     targetdir ("bin/" ..outputdir.. "/%{prj.name}")
     objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
     pchheader "hzpch.h"
@@ -59,10 +59,7 @@ project "MyHazel"
             "HZ_BUILD_DLL",
             "GLFW_INCLUDE_NONE"
         }
-        postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/SandBox/\"")
-		}
+        
     filter "configurations:Debug"
         defines "HZ_DEBUG"
         
@@ -82,7 +79,7 @@ project "SandBox"
         kind "ConsoleApp"
         language "C++"
         cppdialect "C++17"
-        staticruntime "off"
+        staticruntime "on"
         targetdir ("bin/" .. outputdir .. "/%{prj.name}")
         objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
