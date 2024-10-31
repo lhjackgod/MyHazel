@@ -1,3 +1,2 @@
 ﻿  Application.cpp
-D:\gameEngine\MyHazel\MyHazel\src\Hazel\Application.cpp(84,5): warning C4312: “类型强制转换”: 从“const uint32_t”转换到更大的“const void *”
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib
