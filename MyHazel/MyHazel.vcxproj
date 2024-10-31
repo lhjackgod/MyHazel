@@ -140,6 +140,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Hazel\Render\Renderer.h" />
+    <ClInclude Include="src\Hazel\Render\Buffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Hazel\Render\Shader.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContex.h" />
     <ClInclude Include="src\Hazel\Render\GraphicsContex.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -560,6 +564,10 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Hazel\Render\Renderer.cpp" />
+    <ClCompile Include="src\Hazel\Render\Buffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Hazel\Render\Shader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContex.cpp" />
     <ClCompile Include="src\Hazel\Application.cpp" />
     <ClCompile Include="src\Hazel\ImGui\ImGuiBuild.cpp" />

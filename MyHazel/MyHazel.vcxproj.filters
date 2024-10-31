@@ -1289,6 +1289,10 @@
     </ClInclude>
     <ClInclude Include="src\Hazel\Render\GraphicsContex.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContex.h" />
+    <ClInclude Include="src\Hazel\Render\Shader.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Hazel\Render\Buffer.h" />
+    <ClInclude Include="src\Hazel\Render\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">
@@ -1319,5 +1323,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContex.cpp" />
+    <ClCompile Include="src\Hazel\Render\Shader.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Hazel\Render\Buffer.cpp" />
+    <ClCompile Include="src\Hazel\Render\Renderer.cpp" />
   </ItemGroup>
 </Project>
