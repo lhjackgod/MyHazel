@@ -1299,6 +1299,7 @@
     <ClInclude Include="src\Hazel\Render\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Hazel\Render\OrthographicsCamera.h" />
+    <ClInclude Include="src\Hazel\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">

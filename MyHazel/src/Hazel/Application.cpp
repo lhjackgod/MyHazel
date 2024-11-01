@@ -4,6 +4,7 @@
 #include "Hazel/Events/ApplicationEvent.h"
 #include "Platform/Windows/WindowsWindow.h"
 #include "Hazel/Render/Renderer.h"
+#include <GLFW/glfw3.h>
 namespace Hazel {
 	
 	Application* Application::s_Instance = nullptr;
@@ -30,9 +31,11 @@ namespace Hazel {
 	}
 	void Application::Run() {
 		while (m_Running) {
-			
+			float time = static_cast<float>(glfwGetTime());
+			Timestep timestep = time - m_LastFrameTime;
+			m_LastFrameTime = time;
 			for (auto layer : m_LayerStack) {
-				layer->OnUpdate();
+				layer->OnUpdate(timestep);
 			}
 			m_ImGuiLayer->Begin();
 			for (Layer* layer : m_LayerStack) {
