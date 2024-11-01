@@ -1,6 +1,7 @@
 #include "hzpch.h"
 #include "Shader.h"
 #include <glad/glad.h>
+#include <glm/gtc/type_ptr.hpp>
 Hazel::Shader::Shader(const std::string& vertexSrc, const std::string& fragmentSrc)
 {
 	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -69,4 +70,9 @@ void Hazel::Shader::Bind() const
 void Hazel::Shader::Unbind() const
 {
 	glUseProgram(0);
+}
+
+void Hazel::Shader::UploadUniformMat4(const std::string& name, const glm::mat4& matrix)
+{
+	glUniformMatrix4fv(glGetUniformLocation(m_RendererID, name.c_str()), 1, GL_FALSE, glm::value_ptr(matrix));
 }
