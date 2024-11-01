@@ -7,10 +7,7 @@
 #include "Hazel/Layer.h"
 #include "Hazel/LayerStack.h"
 #include "Hazel/ImGui/ImGuiLayer.h"
-#include "Hazel/Render/Shader.h"
-#include "Hazel/Render/Buffer.h"
-#include "Hazel/Render/VertexArray.h"
-#include "Hazel/Render/OrthographicsCamera.h"
+
 namespace Hazel {
 	class HAZEL_API Application
 	{
@@ -29,12 +26,7 @@ namespace Hazel {
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 		ImGuiLayer* m_ImGuiLayer;
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
 
-		std::shared_ptr<VertexArray> m_SquareVA;
-		std::shared_ptr<Shader> m_BlueShader;
-		OrthographicsCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
