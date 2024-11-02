@@ -1,78 +1,22 @@
 #include "hzpch.h"
 #include "Shader.h"
-#include <glad/glad.h>
-#include <glm/gtc/type_ptr.hpp>
-Hazel::Shader::Shader(const std::string& vertexSrc, const std::string& fragmentSrc)
-{
-	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	const GLchar* source = vertexSrc.c_str();
-	glShaderSource(vertexShader, 1, &source, NULL);
-	glCompileShader(vertexShader);
-	GLint isCompiled = 0;
-	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &isCompiled);
-	if (isCompiled == GL_FALSE) {
-		GLint maxLength = 0;
-		glGetShaderiv(vertexShader, GL_INFO_LOG_LENGTH, &maxLength);
-		std::vector<GLchar> infoLog(maxLength);
-		glGetShaderInfoLog(vertexShader, maxLength, &maxLength, &infoLog[0]);
-		glDeleteShader(vertexShader);
-		HZ_CORE_ERROR("{0}", infoLog.data());
-		HZ_CORE_ASSERT(false, "Vertex shader complilation failure");
-		return;
+#include "Hazel/Render/RendererAPI.h"
+#include "Platform/OpenGL/OpenGLShader.h"
+namespace Hazel {
+	Shader* Shader::Create(const std::string& vertexSrc, const std::string& fragmentSrc)
+	{
+		switch (RendererAPI::GetAPI())
+		{
+		case RendererAPI::API::None:
+			HZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
+			return nullptr;
+			break;
+		case RendererAPI::API::OpenGL:
+			return new OpenGLShader(vertexSrc,fragmentSrc);
+			break;
+		
+		}
+		HZ_CORE_ASSERT(false, "Unknown RendererAPI!");
+		return nullptr;
 	}
-	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	const GLchar* fsource = fragmentSrc.c_str();
-	glShaderSource(fragmentShader, 1, &fsource, NULL);
-	glCompileShader(fragmentShader);
-	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &isCompiled);
-	if (isCompiled == GL_FALSE) {
-		GLint maxLength = 0;
-		glGetShaderiv(fragmentShader, GL_INFO_LOG_LENGTH, &maxLength);
-		std::vector<GLchar> infoLog(maxLength);
-		glGetShaderInfoLog(fragmentShader, maxLength, &maxLength, &infoLog[0]);
-		glDeleteShader(fragmentShader);
-		HZ_CORE_ERROR("{0}", infoLog.data());
-		HZ_CORE_ASSERT(false, "Vertex shader complilation failure");
-		return;
-	}
-	m_RendererID = glCreateProgram();
-	GLuint program = m_RendererID;
-	glAttachShader(program, vertexShader);
-	glAttachShader(program, fragmentShader);
-	glLinkProgram(program);
-	GLint isLinked = 0;
-	glGetProgramiv(program, GL_LINK_STATUS, &isLinked);
-	if (isLinked == GL_FALSE) {
-		GLint maxLength = 0;
-		glGetProgramiv(program, GL_INFO_LOG_LENGTH, &maxLength);
-		std::vector<GLchar> infoLog(maxLength);
-		glGetProgramInfoLog(program, maxLength, &maxLength, &infoLog[0]);
-		glDeleteShader(vertexShader);
-		glDeleteShader(fragmentShader);
-		HZ_CORE_ERROR("{0}", infoLog.data());
-		HZ_CORE_ASSERT(false, "Shader link failure!");
-		return;
-	}
-	glDeleteShader(vertexShader);
-	glDeleteShader(fragmentShader);
-}
-
-Hazel::Shader::~Shader()
-{
-	glDeleteProgram(m_RendererID);
-}
-
-void Hazel::Shader::Bind() const
-{
-	glUseProgram(m_RendererID);
-}
-
-void Hazel::Shader::Unbind() const
-{
-	glUseProgram(0);
-}
-
-void Hazel::Shader::UploadUniformMat4(const std::string& name, const glm::mat4& matrix)
-{
-	glUniformMatrix4fv(glGetUniformLocation(m_RendererID, name.c_str()), 1, GL_FALSE, glm::value_ptr(matrix));
 }

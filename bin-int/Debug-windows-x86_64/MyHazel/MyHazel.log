@@ -1,11 +1,8 @@
-﻿  Application.cpp
-  ImGuiLayer.cpp
-D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
-D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
-D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
-D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
-  Layer.cpp
-  LayerStack.cpp
-  WindowsInput.cpp
+﻿  OpenGLShader.cpp
+  Renderer.cpp
+  Buffer.cpp
+  Shader.cpp
+  Application.cpp
+  VertexArray.cpp
   正在生成代码...
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib
