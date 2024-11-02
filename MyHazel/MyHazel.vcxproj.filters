@@ -10,8 +10,14 @@
     <Filter Include="src\Hazel\ImGui">
       <UniqueIdentifier>{1AE138B3-866C-A677-8F7D-296CFB870278}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Hazel\Render">
+      <UniqueIdentifier>{5FC8D72E-4BC1-F680-74F3-DB05604BD68C}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\OpenGL">
+      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platform\Windows">
       <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
@@ -36,6 +42,9 @@
     </Filter>
     <Filter Include="vendor\glm\glm\gtx">
       <UniqueIdentifier>{B3A6A76B-9F8A-68C1-08EB-6214F4ED5243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\stb_image">
+      <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1287,20 +1296,9 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Hazel\Render\GraphicsContex.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLContex.h" />
-    <ClInclude Include="src\Hazel\Render\Shader.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Hazel\Render\Buffer.h" />
-    <ClInclude Include="src\Hazel\Render\Renderer.h" />
-    <ClInclude Include="src\Hazel\Render\VertexArray.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\Hazel\Render\RendererAPI.h" />
-    <ClInclude Include="src\Hazel\Render\RenderCommand.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\Hazel\Render\OrthographicsCamera.h" />
-    <ClInclude Include="src\Hazel\Core\Timestep.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="vendor\stb_image\stb_image.h">
+      <Filter>vendor\stb_image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">
@@ -1321,6 +1319,48 @@
     <ClCompile Include="src\Hazel\Log.cpp">
       <Filter>src\Hazel</Filter>
     </ClCompile>
+    <ClCompile Include="src\Hazel\Render\Buffer.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\OrthographicsCamera.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\RenderCommand.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\Renderer.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\RendererAPI.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\Shader.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\Texture.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\VertexArray.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContex.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
@@ -1330,17 +1370,8 @@
     <ClCompile Include="src\hzpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\OpenGLContex.cpp" />
-    <ClCompile Include="src\Hazel\Render\Shader.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Hazel\Render\Buffer.cpp" />
-    <ClCompile Include="src\Hazel\Render\Renderer.cpp" />
-    <ClCompile Include="src\Hazel\Render\VertexArray.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
-    <ClCompile Include="src\Hazel\Render\RendererAPI.cpp" />
-    <ClCompile Include="src\Hazel\Render\RenderCommand.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\Hazel\Render\OrthographicsCamera.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="vendor\stb_image\stb_image.cpp">
+      <Filter>vendor\stb_image</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

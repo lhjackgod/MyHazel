@@ -12,6 +12,7 @@ IncludeDir["GLFW"] = "MyHazel/vendor/GLFW/include"
 IncludeDir["GLAD"] = "MyHazel/vendor/GLAD/include"
 IncludeDir["imgui"] = "MyHazel/vendor/imgui"
 IncludeDir["glm"] = "MyHazel/vendor/glm"
+IncludeDir["stb_image"] = "MyHazel/vendor/stb_image"
 include "MyHazel/vendor/GLFW"
 include "MyHazel/vendor/GLAD"
 include "MyHazel/vendor/imgui"
@@ -31,7 +32,9 @@ project "MyHazel"
         "{%prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp",
         "%{prj.name}/vendor/glm/glm/**.hpp",
-        "%{prj.name}/vendor/glm/glm/**.inl"
+        "%{prj.name}/vendor/glm/glm/**.inl",
+        "%{prj.name}/vendor/stb_image/**.h",
+        "%{prj.name}/vendor/stb_image/**.cpp"
     }
     defines{
         "_CRT_SECURE_NO_WARNINGS"
@@ -42,7 +45,8 @@ project "MyHazel"
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.GLAD}",
         "%{IncludeDir.imgui}",
-        "%{IncludeDir.glm}"
+        "%{IncludeDir.glm}",
+        "%{IncludeDir.stb_image}"
     }
     links {
         "ImGui",

@@ -1,8 +1,2 @@
-﻿  OpenGLShader.cpp
-  Renderer.cpp
-  Buffer.cpp
-  Shader.cpp
-  Application.cpp
-  VertexArray.cpp
-  正在生成代码...
+﻿  OpenGLTexture.cpp
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib
