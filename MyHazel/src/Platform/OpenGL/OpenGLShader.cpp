@@ -7,11 +7,25 @@
 namespace Hazel {
 	OpenGLShader::OpenGLShader(const std::string& verFile, const std::string& fragFile)
 	{
+		auto lastSlash = verFile.find_last_of("/\\");
+		lastSlash == std::string::npos ? 0 : lastSlash + 1;
+
+		int lastDot = verFile.rfind('.');
+		auto count = lastDot == std::string::npos ? verFile.size() - lastSlash : lastDot - lastSlash;
+		m_Name = verFile.substr(0, count);
 		Compile(
 			PreProcess(
 				ReadFile(verFile),
 				ReadFile(fragFile)
 			)
+		);
+	}
+
+	OpenGLShader::OpenGLShader(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc)
+		:m_Name(name)
+	{
+		Compile(
+		PreProcess(vertexSrc,fragmentSrc)
 		);
 	}
 	
@@ -80,7 +94,9 @@ namespace Hazel {
 	void OpenGLShader::Compile(const std::unordered_map<unsigned int, std::string>& shaderSources)
 	{
 		GLuint program;
-		std::vector<GLuint> glShaderIDs;
+		HZ_CORE_ASSERT(shaderSources.size() <= 2, "We only support 2 shaders for now!");
+		std::array<GLuint, 2> glShaderIDs;
+		int shaderIndex = 0;
 		program = glCreateProgram();
 		for (auto& kv : shaderSources) {
 			GLenum type = kv.first;
@@ -104,7 +120,7 @@ namespace Hazel {
 				break;
 			}
 			glAttachShader(program,shader);
-			glShaderIDs.push_back(shader);
+			glShaderIDs[shaderIndex++] = shader;
 		}
 		m_RendererID = program;
 		glLinkProgram(program);
