@@ -21,13 +21,15 @@ namespace Hazel {
 		inline Window& GetWindow() { return *m_Window; }
 		inline static Application& Get() { return *s_Instance; }
 	private:
-		std::unique_ptr<Window> m_Window;
 		bool OnWindowClose(WindowCloseEvent& e);
+		bool OnWindowResize(WindowResizeEvent& e);
+	private:
+		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		bool m_Minimized = false;
 		LayerStack m_LayerStack;
 		ImGuiLayer* m_ImGuiLayer;
 		float m_LastFrameTime = 0.0f;
-	private:
 		static Application* s_Instance;
 	};
 	Application* createApplication();
