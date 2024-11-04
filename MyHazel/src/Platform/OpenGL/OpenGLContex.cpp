@@ -2,7 +2,7 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "OpenGLContex.h"
+#include "Platform/OpenGL/OpenGLContex.h"
 namespace Hazel {
 	OpenGLContex::OpenGLContex(GLFWwindow* window)
 		:m_WindowHandle(window)
@@ -14,10 +14,10 @@ namespace Hazel {
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		HZ_CORE_ASSERT(status, "failed to initialize glad");
-		HZ_CORE_INFO("OpenGL ÐÅÏ¢:");
-		HZ_CORE_INFO("	Vendor£º{0}", (const char*)glGetString(GL_VENDOR));
-		HZ_CORE_INFO("	ÏÔ¿¨Ãû£º{0}", (const char*)glGetString(GL_RENDERER));
-		HZ_CORE_INFO("	°æ±¾£º{0}", (const char*)glGetString(GL_VERSION));
+		HZ_CORE_INFO("OpenGL ï¿½ï¿½Ï¢:");
+		HZ_CORE_INFO("	Vendorï¿½ï¿½{0}", (const char*)glGetString(GL_VENDOR));
+		HZ_CORE_INFO("	ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½{0}", (const char*)glGetString(GL_RENDERER));
+		HZ_CORE_INFO("	ï¿½æ±¾ï¿½ï¿½{0}", (const char*)glGetString(GL_VERSION));
 
 	}
 	void OpenGLContex::SwapBuffers()

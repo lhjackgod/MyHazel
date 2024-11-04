@@ -1,8 +1,8 @@
 #pragma once
-#include "Core/Timestep.h"
-#include "Events/Event.h"
-#include "Events/MouseEvent.h"
-#include "Events/ApplicationEvent.h"
+#include "Hazel/Core/Timestep.h"
+#include "Hazel/Events/Event.h"
+#include "Hazel/Events/MouseEvent.h"
+#include "Hazel/Events/ApplicationEvent.h"
 #include "Hazel/Render/OrthographicsCamera.h"
 namespace Hazel {
 	class OrthographicsCameraController

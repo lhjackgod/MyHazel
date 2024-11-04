@@ -140,7 +140,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Hazel\OrthographicsCameraController.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />
@@ -560,15 +559,15 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Hazel\OrthographicsCameraController.cpp" />
-    <ClCompile Include="src\Hazel\Application.cpp" />
+    <ClCompile Include="src\Hazel\Core\Application.cpp" />
+    <ClCompile Include="src\Hazel\Core\Layer.cpp" />
+    <ClCompile Include="src\Hazel\Core\LayerStack.cpp" />
+    <ClCompile Include="src\Hazel\Core\Log.cpp" />
     <ClCompile Include="src\Hazel\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Hazel\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Hazel\Layer.cpp" />
-    <ClCompile Include="src\Hazel\LayerStack.cpp" />
-    <ClCompile Include="src\Hazel\Log.cpp" />
     <ClCompile Include="src\Hazel\Render\Buffer.cpp" />
     <ClCompile Include="src\Hazel\Render\OrthographicsCamera.cpp" />
+    <ClCompile Include="src\Hazel\Render\OrthographicsCameraController.cpp" />
     <ClCompile Include="src\Hazel\Render\RenderCommand.cpp" />
     <ClCompile Include="src\Hazel\Render\Renderer.cpp" />
     <ClCompile Include="src\Hazel\Render\RendererAPI.cpp" />

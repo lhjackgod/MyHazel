@@ -1,5 +1,5 @@
 #include "hzpch.h"
-#include "Renderer.h"
+#include "Hazel/Render/Renderer.h"
 #include "Platform/OpenGL/OpenGLShader.h"
 namespace Hazel {
 	Renderer::SceneData* Renderer::m_SceneData = new Renderer::SceneData();

@@ -1,7 +1,7 @@
 #include "hzpch.h"
-#include "OrthographicsCameraController.h"
-#include "Hazel/Input.h"
-#include "Hazel/KeyCodes.h"
+#include "Hazel/Render/OrthographicsCameraController.h"
+#include "Hazel/Core/Input.h"
+#include "Hazel/Core/KeyCodes.h"
 namespace Hazel {
 	OrthographicsCameraController::OrthographicsCameraController(float aspectRatio, bool rotation)
 		:m_AspectRatio(aspectRatio),m_Camera(-m_AspectRatio * m_ZoomLevel,m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel),m_Rotation(rotation)

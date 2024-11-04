@@ -1,5 +1,5 @@
 #include "hzpch.h"
-#include "Buffer.h"
+#include "Hazel/Render/Buffer.h"
 #include "Hazel/Render/Renderer.h"
 #include "Platform/OpenGL/OpenGLBuffer.h"
 #include "Hazel/Render/RendererAPI.h"

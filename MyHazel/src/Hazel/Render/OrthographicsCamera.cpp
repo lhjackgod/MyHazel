@@ -1,5 +1,5 @@
 #include "hzpch.h"
-#include "OrthographicsCamera.h"
+#include "Hazel/Render/OrthographicsCamera.h"
 #include <glm/gtc/matrix_transform.hpp>
 namespace Hazel {
 	OrthographicsCamera::OrthographicsCamera(float left, float right, float bottom, float top)

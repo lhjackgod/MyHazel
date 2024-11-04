@@ -1,5 +1,5 @@
 #pragma once
-#include "Hazel/Window.h"
+#include "Hazel/Core/Window.h"
 #include "Hazel/Render/GraphicsContex.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
