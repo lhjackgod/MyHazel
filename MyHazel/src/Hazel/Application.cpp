@@ -24,10 +24,11 @@ namespace Hazel {
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(HZ_BIND_EVENT_FN(Hazel::Application::OnWindowClose));
-		for (auto it = m_LayerStack.end()-1; it != m_LayerStack.begin(); it--) {
+		for (auto it = m_LayerStack.end()-1;; it--) {
 			(*it)->OnEvent(e);
 			if (e.Handled)
 				break;
+			if (it == m_LayerStack.begin()) break;
 		}
 	}
 	void Application::Run() {
