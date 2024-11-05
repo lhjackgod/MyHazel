@@ -9,6 +9,7 @@ namespace Hazel {
 		Ref<VertexArray> QuadVertexArray;
 		Ref<Shader> FlatColorShader;
 		Ref<Shader> TextureShader;
+		Ref<Texture2D> WhiteTexture;
 	};
 	static Renderer2DStorage* s_Data;
 	void Renderer2D::Init()
@@ -32,7 +33,9 @@ namespace Hazel {
 		squareIB.reset(IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		s_Data->QuadVertexArray->AddVertexBuffer(squareVB);
 		s_Data->QuadVertexArray->SetIndexBuffer(squareIB);
-		s_Data->FlatColorShader = Shader::Create("assets/shaders/Flat2.Ver", "assets/shaders/Flat2.Frag");
+		s_Data->WhiteTexture = Texture2D::Create(1,1);
+		uint32_t whiteTextureData = 0xffffffff;
+		s_Data->WhiteTexture->SetData(&whiteTextureData, sizeof(uint32_t));
 		s_Data->TextureShader = Shader::Create("assets/shaders/Texture.Ver", "assets/shaders/Texture.Frag");
 		s_Data->TextureShader->Bind();
 		s_Data->TextureShader->SetInt("u_Texture", 0);
@@ -43,15 +46,12 @@ namespace Hazel {
 	}
 	void Renderer2D::BeginScene(const OrthographicsCamera& camera)
 	{
-		s_Data->FlatColorShader->Bind();
-		s_Data->FlatColorShader->SetMat4("u_ViewProjection", camera.GetViewProjectionMatrix());
 
 		s_Data->TextureShader->Bind();
 		s_Data->TextureShader->SetMat4("u_ViewProjection", camera.GetViewProjectionMatrix());
 	}
 	void Renderer2D::EndScene()
 	{
-
 	}
 	void Renderer2D::DrawQuad(const glm::vec2& position, const glm::vec2& size, const glm::vec4& color)
 	{
@@ -59,17 +59,17 @@ namespace Hazel {
 	}
 	void Renderer2D::DrawQuad(const glm::vec3& position, const glm::vec2& size, const glm::vec4& color)
 	{
-		s_Data->FlatColorShader->Bind();
+		s_Data->TextureShader->Bind();
 		glm::mat4 t = glm::translate(glm::mat4(1.0), position);
-		s_Data->FlatColorShader->SetMat4(
+		s_Data->TextureShader->SetMat4(
 			"u_Transform",
 			glm::scale(
 				glm::translate(glm::mat4(1.0f),position),
 				glm::vec3(size.x,size.y,1.0f)
 			)
 		);
-		s_Data->FlatColorShader->SetFloat4("u_Color", color);
-
+		s_Data->TextureShader->SetFloat4("u_Color", color);
+		s_Data->WhiteTexture->Bind();
 		s_Data->QuadVertexArray->Bind();
 		Hazel::RenderCommand::DrawIndexed(s_Data->QuadVertexArray);
 	}
@@ -80,6 +80,8 @@ namespace Hazel {
 	void Renderer2D::DrawQuad(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture)
 	{
 		s_Data->TextureShader->Bind();
+		texture->Bind();
+		s_Data->TextureShader->SetFloat4("u_Color", glm::vec4(1.0f));
 		s_Data->TextureShader->SetMat4(
 			"u_Transform",
 			glm::scale(
@@ -88,7 +90,7 @@ namespace Hazel {
 			)
 		);
 		s_Data->QuadVertexArray->Bind();
-		texture->Bind();
+		
 		RenderCommand::DrawIndexed(s_Data->QuadVertexArray);
 	}
 }
