@@ -1,8 +1,2 @@
 ﻿  Renderer2D.cpp
-  Application.cpp
-  Buffer.cpp
-  Renderer.cpp
-  VertexArray.cpp
-  正在生成代码...
-D:\gameEngine\MyHazel\MyHazel\src\Hazel\Core\Application.cpp(78): warning C4715: “Hazel::Application::OnWindowResize”: 不是所有的控件路径都返回值
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib
