@@ -61,9 +61,5 @@ namespace Hazel {
 			glfwMakeContextCurrent(backup_curren_contex);
 		}
 	}
-	void ImGuiLayer::OnImGuiRender() {
-		static bool show = true;
-		ImGui::ShowDemoWindow(&show);
-	}
 	
 }
