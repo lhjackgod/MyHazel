@@ -77,9 +77,13 @@ public:
 				Hazel::Renderer::Submit(m_ShaderLibray.Get(FlatName), m_SquareVA, transform);
 			}
 		}
-		m_Texture->Bind();
+		m_ShaderLibray.Get(TextureName)->Bind();
 		m_ShaderLibray.Get(TextureName)->SetFloat4("u_Color", glm::vec4(1.0f));
-		Hazel::Renderer::Submit(m_ShaderLibray.Get(TextureName), m_SquareVA, glm::scale(glm::mat4(1.0), glm::vec3(1.5f)));
+		m_Texture->Bind();
+		Hazel::Renderer::Submit(m_ShaderLibray.Get(TextureName), m_SquareVA);
+		//m_Texture->Bind();
+		//m_ShaderLibray.Get(TextureName)->SetFloat4("u_Color", glm::vec4(1.0f));
+		//Hazel::Renderer::Submit(m_ShaderLibray.Get(TextureName), m_SquareVA, glm::scale(glm::mat4(1.0), glm::vec3(1.5f)));
 		//m_ChernoLogoTexture->Bind();
 		//Hazel::Renderer::Submit(m_ShaderLibray.Get(TextureName), m_SquareVA, glm::scale(glm::mat4(1.0), glm::vec3(1.5f)));
 		Hazel::Renderer::Submit(m_ShaderLibray.Get(triangleName), m_VertexArray,glm::mat4(1.0));
