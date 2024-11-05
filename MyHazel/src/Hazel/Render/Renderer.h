@@ -2,6 +2,7 @@
 #include "Hazel/Render/RenderCommand.h"
 #include "Hazel/Render/OrthographicsCamera.h"
 #include "Hazel/Render/Shader.h"
+#include "Hazel/Render/Renderer2D.h"
 namespace Hazel {
 	class Renderer {
 	public:

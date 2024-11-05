@@ -9,6 +9,7 @@
 #include "Hazel/ImGui/ImGuiLayer.h"
 //---Render-----------------------------------
 #include "Hazel/Render/Renderer.h"
+#include "Hazel/Render/Renderer2D.h"
 #include "Hazel/Render/RenderCommand.h"
 #include "Hazel/Render/Shader.h"
 #include "Hazel/Render/Texture.h"
