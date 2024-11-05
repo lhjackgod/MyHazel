@@ -15,4 +15,3 @@
 #include "Hazel/Render/VertexArray.h"
 #include "Hazel/Render/Buffer.h"
 #include "Hazel/Render/OrthographicsCameraController.h"
-#include "Hazel/Core/EntryPoint.h"

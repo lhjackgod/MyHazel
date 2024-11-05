@@ -12,7 +12,7 @@ namespace Hazel {
 
 		int lastDot = verFile.rfind('.');
 		auto count = lastDot == std::string::npos ? verFile.size() - lastSlash : lastDot - lastSlash;
-		m_Name = verFile.substr(0, count);
+		m_Name = verFile.substr(lastSlash + 1, count);
 		Compile(
 			PreProcess(
 				ReadFile(verFile),

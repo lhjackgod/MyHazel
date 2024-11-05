@@ -1,9 +1,11 @@
-#include <Hazel.h>
+#include "Hazel.h"
+#include "Hazel/Core/EntryPoint.h"
 #include <stdio.h>
 #include <imgui/imgui.h>
 #include <glm/gtc/matrix_transform.hpp>
 #include "Platform/OpenGL/OpenGLShader.h"
 #include <glm/gtc/type_ptr.hpp>
+#include "SandBox2D.h"
 class ExampleLayer : public Hazel::Layer {
 public:
 	ExampleLayer()
@@ -15,7 +17,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 		uint32_t indices[3] = { 0, 1, 2 };
-		m_VertexArray.reset(Hazel::VertexArray::Create());
+		m_VertexArray = Hazel::VertexArray::Create();
 
 		Hazel::Ref<Hazel::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Hazel::VertexBuffer::Create(vertices, sizeof(vertices)));
@@ -29,7 +31,7 @@ public:
 		indexBuffer.reset(Hazel::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
-		m_SquareVA.reset(Hazel::VertexArray::Create());
+		m_SquareVA = Hazel::VertexArray::Create();
 		float squareVertices[5 * 4] = {
 			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
 			 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
@@ -79,14 +81,13 @@ public:
 		m_ChernoLogoTexture->Bind();
 		Hazel::Renderer::Submit(m_ShaderLibray.Get(TextureName), m_SquareVA, glm::scale(glm::mat4(1.0), glm::vec3(1.5f)));
 		Hazel::Renderer::Submit(m_ShaderLibray.Get(triangleName), m_VertexArray);
-		
 		Hazel::Renderer::EndScene();
 	}
 	void OnEvent(Hazel::Event& event) override{
 		
 		m_CameraController.OnEvent(event);
 	}
-	virtual void onImGuiRender() override
+	virtual void OnImGuiRender() override
 	{
 		ImGui::Begin("Setting");
 		ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
@@ -110,9 +111,10 @@ private:
 };
 class Sanbox : public Hazel::Application {
 public:
-	Sanbox() { 
+	Sanbox() {
+		
 		PushLayer(new ExampleLayer());
-		//PushOverLayer(new Hazel::ImGuiLayer());
+		PushLayer(new SandBox2D());
 	}
 	~Sanbox() { printf("delete Sanbox\n"); }
 
