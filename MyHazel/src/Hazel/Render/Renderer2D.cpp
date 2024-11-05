@@ -23,14 +23,14 @@ namespace Hazel {
 			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 		Ref<VertexBuffer> squareVB;
-		squareVB.reset(VertexBuffer::Create(squareVertices,sizeof(squareVertices)));
+		squareVB = VertexBuffer::Create(squareVertices,sizeof(squareVertices));
 		squareVB->SetLayout({
 			{Hazel::ShaderDataType::Float3,"a_Position"},
 			{Hazel::ShaderDataType::Float2,"a_TexCoord"}
 			});
 		Ref<IndexBuffer> squareIB;
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		squareIB.reset(IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		squareIB = IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
 		s_Data->QuadVertexArray->AddVertexBuffer(squareVB);
 		s_Data->QuadVertexArray->SetIndexBuffer(squareIB);
 		s_Data->WhiteTexture = Texture2D::Create(1,1);

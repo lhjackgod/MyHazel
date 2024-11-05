@@ -1,7 +1,7 @@
 #pragma once
 #include "Hazel/Events/Event.h"
 namespace Hazel {
-	class HAZEL_API WindowResizeEvent : public Event {
+	class WindowResizeEvent : public Event {
 	public:
 		WindowResizeEvent(unsigned int width, unsigned int height)
 			:m_Width(width), m_Height(height){}
@@ -17,7 +17,7 @@ namespace Hazel {
 	private:
 		int m_Width, m_Height;
 	};
-	class HAZEL_API WindowCloseEvent : public Event {
+	class WindowCloseEvent : public Event {
 	public:
 		WindowCloseEvent() = default;
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
@@ -29,13 +29,13 @@ namespace Hazel {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 		EVENT_CLASS_TYPE(AppTick)
 	};
-	class HAZEL_API AppUpdateEvent : Event {
+	class AppUpdateEvent : Event {
 	public:
 		AppUpdateEvent() = default;
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 		EVENT_CLASS_TYPE(AppUpdate)
 	};
-	class HAZEL_API AppRenderEvent : Event {
+	class AppRenderEvent : Event {
 	public:
 		AppRenderEvent() = default;
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)

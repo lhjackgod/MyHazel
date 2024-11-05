@@ -1381,5 +1381,6 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazel\Render\Renderer2D.cpp" />
+    <ClCompile Include="src\Hazel\Render\GraphicsContex.cpp" />
   </ItemGroup>
 </Project>
