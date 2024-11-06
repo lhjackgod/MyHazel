@@ -4,12 +4,16 @@
 extern Hazel::Application* Hazel::createApplication();
 int main(int arg, char** argv) {
 	Hazel::Log::Inint();
-	Hazel::Log::GetCoreLogger()->warn("jackgod");
-	Hazel::Log::GetClientLogger()->error("hahha");
-
-	HZ_CORE_ERROR("llll{0}{1}", 123, 2);
+	HZ_PROFILE_BEGIN_SESSION("startup", "HazelProfile-Startup.json");
 	Hazel::Application* app = Hazel::createApplication();
+	HZ_PROFILE_END_SESSION();
+
+	HZ_PROFILE_BEGIN_SESSION("Runtime", "HazelProfile-Runtime.json");
 	app->Run();
+	HZ_PROFILE_END_SESSION();
+
+	HZ_PROFILE_BEGIN_SESSION("Startup", "HazelProfile-Shutdown.json");
 	delete app;
+	HZ_PROFILE_END_SESSION();
 }
 #endif
