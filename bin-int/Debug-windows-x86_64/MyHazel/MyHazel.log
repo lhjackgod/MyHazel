@@ -1,2 +1,12 @@
-﻿  OpenGLRendererAPI.cpp
+﻿  Application.cpp
+  Buffer.cpp
+  GraphicsContex.cpp
+  Renderer.cpp
+  Renderer2D.cpp
+  Shader.cpp
+  VertexArray.cpp
+  OpenGLShader.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLShader.cpp(13,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码...
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Core\Application.cpp(81): warning C4715: “Hazel::Application::OnWindowResize”: 不是所有的控件路径都返回值
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib

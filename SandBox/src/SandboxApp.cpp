@@ -8,8 +8,8 @@ class Sanbox : public Hazel::Application {
 public:
 	Sanbox() {
 		
-		PushLayer(new ExampleLayer());
-		//PushLayer(new SandBox2D());
+		//PushLayer(new ExampleLayer());
+		PushLayer(new SandBox2D());
 	}
 	~Sanbox() { printf("delete Sanbox\n"); }
 
