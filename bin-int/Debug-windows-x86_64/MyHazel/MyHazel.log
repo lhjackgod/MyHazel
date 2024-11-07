@@ -1,3 +1,18 @@
-﻿  Renderer2D.cpp
+﻿  Application.cpp
+  ImGuiLayer.cpp
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
+  Buffer.cpp
+  GraphicsContex.cpp
+  Renderer.cpp
+  Renderer2D.cpp
 D:\gameEngine\MyHazel\MyHazel\src\Hazel\Render\Renderer2D.cpp(105,21): warning C4244: “初始化”: 从“__int64”转换到“uint32_t”，可能丢失数据
+  Texture.cpp
+  VertexArray.cpp
+  OpenGLTexture.cpp
+  WindowsInput.cpp
+  正在生成代码...
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Core\Application.cpp(85): warning C4715: “Hazel::Application::OnWindowResize”: 不是所有的控件路径都返回值
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib

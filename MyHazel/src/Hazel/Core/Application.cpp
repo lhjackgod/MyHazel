@@ -65,6 +65,10 @@ namespace Hazel {
 		m_LayerStack.PushOverLayer(overlayer);
 		overlayer->OnAttach();
 	}
+	void Application::Close()
+	{
+		m_Running = false;
+	}
 	bool Application::OnWindowClose(WindowCloseEvent& e)
 	{
 		m_Running = false;

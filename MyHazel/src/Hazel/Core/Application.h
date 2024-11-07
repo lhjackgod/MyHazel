@@ -18,8 +18,9 @@ namespace Hazel {
 		void Run();
 		void PushLayer(Layer* layer);
 		void PushOverLayer(Layer* overlayer);
-		inline Window& GetWindow() { return *m_Window; }
-		inline static Application& Get() { return *s_Instance; }
+		Window& GetWindow() { return *m_Window; }
+		void Close();
+		static Application& Get() { return *s_Instance; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
