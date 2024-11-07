@@ -1,1 +1,9 @@
-﻿  SandBox.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\SandBox\SandBox.exe
+﻿  SandBox2D.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Core\Core.h(8,1): warning C4005: “HZ_PLATFORM_WINDOWS”: 宏重定义
+D:\gameEngine\MyHazel\SandBox\src\SandBox2D.cpp : message : 参见“HZ_PLATFORM_WINDOWS”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Debug\Instrumentor.h(113,1): warning C4267: “初始化”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
+  SandBox.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\SandBox\SandBox.exe
