@@ -1302,9 +1302,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Hazel\Render\Renderer2D.h" />
-    <ClInclude Include="src\Hazel\Render\Framebuffer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Core\Application.cpp">
@@ -1328,6 +1325,12 @@
     <ClCompile Include="src\Hazel\Render\Buffer.cpp">
       <Filter>src\Hazel\Render</Filter>
     </ClCompile>
+    <ClCompile Include="src\Hazel\Render\Framebuffer.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\GraphicsContex.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
     <ClCompile Include="src\Hazel\Render\OrthographicsCamera.cpp">
       <Filter>src\Hazel\Render</Filter>
     </ClCompile>
@@ -1338,6 +1341,9 @@
       <Filter>src\Hazel\Render</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazel\Render\Renderer.cpp">
+      <Filter>src\Hazel\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Render\Renderer2D.cpp">
       <Filter>src\Hazel\Render</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazel\Render\RendererAPI.cpp">
@@ -1356,6 +1362,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContex.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
@@ -1382,9 +1391,6 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Hazel\Render\Renderer2D.cpp" />
-    <ClCompile Include="src\Hazel\Render\GraphicsContex.cpp" />
-    <ClCompile Include="src\Hazel\Render\Framebuffer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
+    <ClCompile Include="src\Hazel\Core\Window.cpp" />
   </ItemGroup>
 </Project>
