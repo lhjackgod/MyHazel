@@ -14,7 +14,7 @@ namespace Hazel {
 		{
 		}
 	};
-	Application* CreateApplication() {
+	Application* createApplication() {
 		return new HazelEditor();
 	}
 }

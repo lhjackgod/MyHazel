@@ -130,16 +130,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyHazel\MyHazel.vcxproj">
-      <Project>{FF40924A-6B20-11E6-7438-9CBCE0967747}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="src\EditorLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EditorLayer.cpp" />
     <ClCompile Include="src\HazelEditorApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyHazel\MyHazel.vcxproj">
+      <Project>{FF40924A-6B20-11E6-7438-9CBCE0967747}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

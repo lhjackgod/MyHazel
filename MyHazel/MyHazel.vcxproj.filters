@@ -1316,6 +1316,9 @@
     <ClCompile Include="src\Hazel\Core\Log.cpp">
       <Filter>src\Hazel\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Hazel\Core\Window.cpp">
+      <Filter>src\Hazel\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\Hazel\ImGui\ImGuiBuild.cpp">
       <Filter>src\Hazel\ImGui</Filter>
     </ClCompile>
@@ -1391,6 +1394,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Hazel\Core\Window.cpp" />
   </ItemGroup>
 </Project>
