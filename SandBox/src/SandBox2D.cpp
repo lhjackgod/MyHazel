@@ -12,6 +12,10 @@ SandBox2D::SandBox2D()
 void SandBox2D::OnAttach()
 {
 	m_CheckboardTexture = Hazel::Texture2D::Create("assets/textures/Checkerboard.png");
+	Hazel::FramebufferSpecification fbSpec;
+	fbSpec.width = 1280;
+	fbSpec.height = 720;
+	m_Framebuffer = Hazel::Framebuffer::Create(fbSpec);
 }
 
 void SandBox2D::OnDetach()
@@ -25,12 +29,12 @@ void SandBox2D::OnUpdate(Hazel::Timestep ts)
 	HZ_PROFILE_SCOPE("CameraController");
 	m_CameraController.OnUpdate(ts);
 	
-	
 	HZ_PROFILE_SCOPE("Renderer Prep");
+	Hazel::Renderer2D::ResetStats();
+	m_Framebuffer->Bind();
 	Hazel::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 	Hazel::RenderCommand::Clear();
-	
-	Hazel::Renderer2D::ResetStats();
+
 	static float rotation = 0.0f;
 	rotation += ts * 50.0f;
 	HZ_PROFILE_SCOPE("Renderer Draw");
@@ -49,6 +53,7 @@ void SandBox2D::OnUpdate(Hazel::Timestep ts)
 		}
 	}
 	Hazel::Renderer2D::EndScene();
+	m_Framebuffer->Unbind();
 }
 
 void SandBox2D::OnImGuiRender()
@@ -115,8 +120,8 @@ void SandBox2D::OnImGuiRender()
 		ImGui::Text("Vertices: %d", stats.GetTotalVertexCount());
 		ImGui::Text("Indices: %d", stats.GetTotalIndexCount());
 		ImGui::ColorEdit4("Square Color", glm::value_ptr(m_SquareColor));
-		uint32_t textureID = m_CheckboardTexture->GetRendererID();
-		ImGui::Image((void*)textureID, ImVec2{ 256.0f, 256.0f });
+		uint32_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
+		ImGui::Image((void*)textureID, ImVec2{ 1280.0f, 720.0f });
 		ImGui::End();
 		ImGui::End();
 	}
@@ -130,7 +135,7 @@ void SandBox2D::OnImGuiRender()
 		ImGui::Text("Indices: %d", state.GetTotalIndexCount());
 		ImGui::ColorEdit4("Square Color", glm::value_ptr(m_SquareColor));
 		uint32_t textureID = m_CheckboardTexture->GetRendererID();
-		ImGui::Image((void*)textureID, ImVec2{ 256.0f, 256.0f });
+		ImGui::Image((void*)textureID, ImVec2{ 1280.0f, 720.0f });
 		ImGui::End();
 	}
 	

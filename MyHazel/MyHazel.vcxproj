@@ -140,6 +140,8 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
+    <ClInclude Include="src\Hazel\Render\Framebuffer.h" />
     <ClInclude Include="src\Hazel\Render\Renderer2D.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
@@ -560,6 +562,8 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
+    <ClCompile Include="src\Hazel\Render\Framebuffer.cpp" />
     <ClCompile Include="src\Hazel\Render\GraphicsContex.cpp" />
     <ClCompile Include="src\Hazel\Render\Renderer2D.cpp" />
     <ClCompile Include="src\Hazel\Core\Application.cpp" />

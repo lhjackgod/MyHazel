@@ -6,6 +6,6 @@ D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGU
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
-D:\gameEngine\MyHazel\SandBox\src\SandBox2D.cpp(119,32): warning C4312: “类型强制转换”: 从“uint32_t”转换到更大的“void *”
-D:\gameEngine\MyHazel\SandBox\src\SandBox2D.cpp(133,32): warning C4312: “类型强制转换”: 从“uint32_t”转换到更大的“void *”
+D:\gameEngine\MyHazel\SandBox\src\SandBox2D.cpp(124,32): warning C4312: “类型强制转换”: 从“uint32_t”转换到更大的“void *”
+D:\gameEngine\MyHazel\SandBox\src\SandBox2D.cpp(138,32): warning C4312: “类型强制转换”: 从“uint32_t”转换到更大的“void *”
   SandBox.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\SandBox\SandBox.exe
