@@ -11,6 +11,7 @@ namespace Hazel {
 		OrthographicsCameraController(float aspectRatio, bool rotation = false);
 		void OnUpdate(Timestep ts);
 		void OnEvent(Event& e);
+		void OnResize(float width, float height);
 		OrthographicsCamera& GetCamera() { return m_Camera; }
 		const OrthographicsCamera& GetCamera() const { return m_Camera; }
 		float GetZoomLevel() const { return m_ZoomLevel; }
