@@ -1,6 +1,52 @@
-﻿  ImGuiLayer.cpp
+﻿  hzpch.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Core\Base.h(8,1): warning C4005: “HZ_PLATFORM_WINDOWS”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\src\hzpch.cpp : message : 参见“HZ_PLATFORM_WINDOWS”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Debug\Instrumentor.h(113,1): warning C4267: “初始化”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  Scene.cpp
+  Application.cpp
+  Layer.cpp
+  LayerStack.cpp
+  Log.cpp
+  Window.cpp
+  ImGuiBuild.cpp
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
+  ImGuiLayer.cpp
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
+D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
+  Buffer.cpp
+  Framebuffer.cpp
+  GraphicsContex.cpp
+  OrthographicsCamera.cpp
+  OrthographicsCameraController.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Render\OrthographicsCameraController.cpp(57,37): warning C4244: “参数”: 从“unsigned int”转换到“float”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Render\OrthographicsCameraController.cpp(57,22): warning C4244: “参数”: 从“unsigned int”转换到“float”，可能丢失数据
+  RenderCommand.cpp
+  Renderer.cpp
+  Renderer2D.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Render\Renderer2D.cpp(105,21): warning C4244: “初始化”: 从“__int64”转换到“uint32_t”，可能丢失数据
+  RendererAPI.cpp
+  Shader.cpp
+  Texture.cpp
+  VertexArray.cpp
+  正在生成代码...
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Core\Application.cpp(85): warning C4715: “Hazel::Application::OnWindowResize”: 不是所有的控件路径都返回值
+  正在编译...
+  OpenGLBuffer.cpp
+  OpenGLContex.cpp
+  OpenGLFramebuffer.cpp
+  OpenGLRendererAPI.cpp
+  OpenGLShader.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLShader.cpp(13,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  OpenGLTexture.cpp
+  OpenGLVertexArray.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLVertexArray.cpp(76,5): warning C4312: “类型强制转换”: 从“const uint32_t”转换到更大的“const void *”
+  WindowsInput.cpp
+  WindowsWindow.cpp
+  stb_image.cpp
+  正在生成代码...
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib

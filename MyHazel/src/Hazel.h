@@ -7,6 +7,8 @@
 #include "Hazel/Core/KeyCodes.h"
 #include "Hazel/Core/MouseButtonCodes.h"
 #include "Hazel/ImGui/ImGuiLayer.h"
+#include "Hazel/Scene/Scene.h"
+#include "Hazel/Scene/Components.h"
 //---Render-----------------------------------
 #include "Hazel/Render/Renderer.h"
 #include "Hazel/Render/Renderer2D.h"

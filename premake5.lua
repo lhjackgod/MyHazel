@@ -13,6 +13,7 @@ IncludeDir["GLAD"] = "MyHazel/vendor/GLAD/include"
 IncludeDir["imgui"] = "MyHazel/vendor/imgui"
 IncludeDir["glm"] = "MyHazel/vendor/glm"
 IncludeDir["stb_image"] = "MyHazel/vendor/stb_image"
+IncludeDir["entt"] = "MyHazel/vendor/entt/include"
 include "MyHazel/vendor/GLFW"
 include "MyHazel/vendor/GLAD"
 include "MyHazel/vendor/imgui"
@@ -46,7 +47,8 @@ project "MyHazel"
         "%{IncludeDir.GLAD}",
         "%{IncludeDir.imgui}",
         "%{IncludeDir.glm}",
-        "%{IncludeDir.stb_image}"
+        "%{IncludeDir.stb_image}",
+        "%{IncludeDir.entt}"
     }
     links {
         "ImGui",
@@ -146,7 +148,8 @@ project "Hazelnut"
         "MyHazel/vendor/spdlog/include",
         "MyHazel/src",
         "%{IncludeDir.glm}",
-        "MyHazel/vendor"
+        "MyHazel/vendor",
+        "%{IncludeDir.entt}"
     }
     links
     {
