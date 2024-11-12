@@ -1,16 +1,14 @@
 #pragma once
 #include <glm/glm.hpp>
-#include "Hazel/Render/Camera.h"
+#include "Hazel/Scene/SceneCamera.h"
 namespace Hazel {
 	struct CameraComponent
 	{
 		bool Primary = true;
-		Camera Camera;
+		bool FIxedApectRatio = false;
+		SceneCamera Camera;
 		CameraComponent() = default;
 		CameraComponent(const CameraComponent&) = default;
-		CameraComponent(const glm::mat4& projection)
-			:Camera(projection)
-		{}
 	};
 	struct TagComponent
 	{
