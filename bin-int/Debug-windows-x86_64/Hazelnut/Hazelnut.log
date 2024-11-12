@@ -4,14 +4,5 @@ D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(74,1): warning C4005: “IMGU
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(25): message : 参见“IMGUI_VERSION”的前一个定义
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
 D:\gameEngine\MyHazel\MyHazel\vendor\imgui\imgui.h(26): message : 参见“IMGUI_VERSION_NUM”的前一个定义
-D:\gameEngine\MyHazel\Hazelnut\src\EditorLayer.cpp(124,32): warning C4312: “类型强制转换”: 从“uint32_t”转换到更大的“void *”
-  HazelEditorApp.cpp
-D:\gameEngine\MyHazel\MyHazel\src\Hazel\Debug\Instrumentor.h(113,1): warning C4267: “初始化”: 从“size_t”转换到“uint32_t”，可能丢失数据
-  正在生成代码...
-LIBCMTD.lib(initializers.obj) : warning LNK4098: 默认库“msvcrtd.lib”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
-LINK : warning LNK4217: 符号“__stdio_common_vsscanf”(在“ libucrtd.lib(input.obj)”中定义)已由“Glad.lib(glad.obj)”(函数“_vsscanf_s_l”中)导入
-LINK : warning LNK4217: 符号“free”(在“ libucrtd.lib(free.obj)”中定义)已由“Glad.lib(glad.obj)”(函数“free_exts”中)导入
-LINK : warning LNK4217: 符号“malloc”(在“ libucrtd.lib(malloc.obj)”中定义)已由“Glad.lib(glad.obj)”(函数“get_exts”中)导入
-LINK : warning LNK4217: 符号“realloc”(在“ libucrtd.lib(realloc.obj)”中定义)已由“Glad.lib(glad.obj)”(函数“get_exts”中)导入
-LINK : warning LNK4217: 符号“strncmp”(在“ libucrtd.lib(strncmp.obj)”中定义)已由“Glad.lib(glad.obj)”(函数“find_coreGL”中)导入
+D:\gameEngine\MyHazel\Hazelnut\src\EditorLayer.cpp(143,32): warning C4312: “类型强制转换”: 从“uint32_t”转换到更大的“void *”
   Hazelnut.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\Hazelnut\Hazelnut.exe

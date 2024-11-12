@@ -20,7 +20,12 @@ namespace Hazel {
 		Ref<Shader> m_FlatColorShader;
 		Ref<Framebuffer> m_Framebuffer;
 		Ref<Scene> m_ActiveScene;
+
 		Entity m_SquareEntity;
+		Entity m_CameraEntity;
+		Entity m_SecondCamra;
+
+		bool m_PrimaryCamera = true;
 		Ref<Texture2D> m_CheckerboardTexture;
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec4 m_SquareColor = { 0.2f,0.3f,0.8f,1.0f };

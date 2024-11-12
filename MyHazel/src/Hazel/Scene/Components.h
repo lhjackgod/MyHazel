@@ -1,6 +1,17 @@
 #pragma once
 #include <glm/glm.hpp>
+#include "Hazel/Render/Camera.h"
 namespace Hazel {
+	struct CameraComponent
+	{
+		bool Primary = true;
+		Camera Camera;
+		CameraComponent() = default;
+		CameraComponent(const CameraComponent&) = default;
+		CameraComponent(const glm::mat4& projection)
+			:Camera(projection)
+		{}
+	};
 	struct TagComponent
 	{
 		std::string Tag;
