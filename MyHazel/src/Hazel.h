@@ -9,6 +9,7 @@
 #include "Hazel/ImGui/ImGuiLayer.h"
 #include "Hazel/Scene/Scene.h"
 #include "Hazel/Scene/Entity.h"
+#include "Hazel/Scene/ScriptableEntity.h"
 #include "Hazel/Scene/Components.h"
 //---Render-----------------------------------
 #include "Hazel/Render/Renderer.h"

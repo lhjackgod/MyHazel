@@ -145,6 +145,7 @@
     <ClInclude Include="src\Hazel\Scene\Entity.h" />
     <ClInclude Include="src\Hazel\Scene\Components.h" />
     <ClInclude Include="src\Hazel\Scene\Scene.h" />
+    <ClInclude Include="src\Hazel\Scene\ScriptableEntity.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />
