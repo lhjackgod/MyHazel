@@ -1,3 +1,7 @@
-﻿  Entity.cpp
-  Scene.cpp
+﻿  Scene.cpp
+  SceneCamera.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Scene\SceneCamera.cpp(38,20): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Scene\SceneCamera.cpp(39,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Scene\SceneCamera.cpp(40,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Scene\SceneCamera.cpp(41,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib
