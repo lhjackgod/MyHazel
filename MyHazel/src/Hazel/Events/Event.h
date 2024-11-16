@@ -1,5 +1,6 @@
 #pragma once
-#include "hzpch.h"
+#include <functional>
+#include "Hazel/Debug/Instrumentor.h"
 namespace Hazel {
 	enum class EventType
 	{

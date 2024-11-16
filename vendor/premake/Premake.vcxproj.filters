@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{61705900-4DFC-870B-B6AA-880BA255880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Hazelnut">
+      <UniqueIdentifier>{1B351CC0-87EA-94B5-10DF-8E8C7C938BB9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\MyHazel">
+      <UniqueIdentifier>{4AFAD884-36B2-1AD2-9FB9-F32D8B90B5C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\MyHazel\vendor">
+      <UniqueIdentifier>{67D95673-D3EF-5409-1C67-E02A88BC2591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\MyHazel\vendor\GLAD">
+      <UniqueIdentifier>{4E8C441C-3A86-6D6E-23F3-037F0F8CD3DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\MyHazel\vendor\GLFW">
+      <UniqueIdentifier>{068D441C-F286-6D6E-DBF3-037FC78CD3DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\MyHazel\vendor\imgui">
+      <UniqueIdentifier>{111850A7-7D4F-983E-8659-FC61F20FBF37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\SandBox">
+      <UniqueIdentifier>{1FF36A1D-0BAB-AC6A-74B2-85C66089475B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Hazelnut\premake5.lua">
+      <Filter>..\Hazelnut</Filter>
+    </None>
+    <None Include="..\..\MyHazel\premake5.lua">
+      <Filter>..\MyHazel</Filter>
+    </None>
+    <None Include="..\..\MyHazel\vendor\GLAD\premake5.lua">
+      <Filter>..\MyHazel\vendor\GLAD</Filter>
+    </None>
+    <None Include="..\..\MyHazel\vendor\GLFW\premake5.lua">
+      <Filter>..\MyHazel\vendor\GLFW</Filter>
+    </None>
+    <None Include="..\..\MyHazel\vendor\imgui\premake5.lua">
+      <Filter>..\MyHazel\vendor\imgui</Filter>
+    </None>
+    <None Include="..\..\SandBox\premake5.lua">
+      <Filter>..\SandBox</Filter>
+    </None>
+    <None Include="..\..\premake5.lua">
+      <Filter>..</Filter>
+    </None>
+    <None Include="premake5.lua" />
+  </ItemGroup>
+</Project>
