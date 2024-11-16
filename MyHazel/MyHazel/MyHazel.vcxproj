@@ -608,6 +608,7 @@
     <ClInclude Include="..\vendor\glm\glm\vec4.hpp" />
     <ClInclude Include="..\vendor\glm\glm\vector_relational.hpp" />
     <ClInclude Include="..\vendor\stb_image\stb_image.h" />
+    <ClInclude Include="Assert.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Hazel\Core\Application.cpp" />

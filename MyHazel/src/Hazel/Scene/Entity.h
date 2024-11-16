@@ -22,7 +22,7 @@ namespace Hazel {
 		template<typename T>
 		bool HasComponent()
 		{
-			return m_Scene->m_Registry.all_of<T>(m_EntityHandle);
+			return m_Scene->m_Registry.has<T>(m_EntityHandle);
 		}
 		template<typename T>
 		void RemoveComponent()
@@ -31,6 +31,15 @@ namespace Hazel {
 			m_Scene->m_Registry.remove<T>(m_EntityHandle);
 		}
 		operator bool() const { return static_cast<uint32_t>(m_EntityHandle) != 0; }
+		operator uint32_t() const { return (uint32_t)m_EntityHandle; }
+		bool operator ==(const Entity& other) const
+		{
+			return m_EntityHandle == other.m_EntityHandle && m_Scene == other.m_Scene;
+		}
+		bool operator !=(const Entity& other) const
+		{
+			return !(*this == other);
+		}
 	private:
 		entt::entity m_EntityHandle{ entt::null };
 		Scene* m_Scene = nullptr;

@@ -1,0 +1,23 @@
+#pragma once
+#include "Hazel/Core/Base.h"
+#include "Hazel/Scene/Scene.h"
+#include "Hazel/Scene/Entity.h"
+#include "Hazel/Core/Log.h"
+namespace Hazel
+{
+	class SceneHierarchyPanel
+	{
+	public:
+		SceneHierarchyPanel() = default;
+		SceneHierarchyPanel(const Ref<Scene>& scene);
+		void SetContex(const Ref<Scene>& scene);
+
+		void OnImGuiRender();
+	private:
+		void DrawEntityNode(Entity entity);
+	private:
+		Ref<Scene> m_Contex;
+		Entity m_SelectionContex;
+	};
+}
+
