@@ -30,7 +30,7 @@ namespace Hazel {
 			HZ_CORE_ASSERT(HasComponent<T>(), "Entity does not have component");
 			m_Scene->m_Registry.remove<T>(m_EntityHandle);
 		}
-		operator bool() const { return static_cast<uint32_t>(m_EntityHandle) != 0; }
+		operator bool() const { return m_EntityHandle != entt::null; }
 		operator uint32_t() const { return (uint32_t)m_EntityHandle; }
 		bool operator ==(const Entity& other) const
 		{
