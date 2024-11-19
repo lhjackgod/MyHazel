@@ -45,7 +45,6 @@ namespace Hazel {
 			:Translation(translation){}
 		glm::mat4 GetTransform() const
 		{
-			HZ_CORE_INFO("x: {0}, y {1} z {2} ", Rotation.x, Rotation.y, Rotation.z);
 			glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), Rotation.x, glm::vec3(1, 0, 0)) *
 				glm::rotate(glm::mat4(1.0f), Rotation.y, { 0, 1, 0 }) *
 				glm::rotate(glm::mat4(1.0f), Rotation.z, { 0, 0, 1 });
