@@ -144,7 +144,7 @@
     <ClCompile Include="src\SandboxApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyHazel\MyHazel\MyHazel.vcxproj">
+    <ProjectReference Include="..\MyHazel\MyHazel.vcxproj">
       <Project>{FF40924A-6B20-11E6-7438-9CBCE0967747}</Project>
     </ProjectReference>
   </ItemGroup>

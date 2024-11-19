@@ -1,2 +1,3 @@
-﻿  Scene.cpp
+﻿  SceneSerializer.cpp
+  Defining YAML_CPP_API for DLL import
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib

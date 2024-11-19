@@ -22,6 +22,12 @@
     <Filter Include="..\MyHazel\vendor\imgui">
       <UniqueIdentifier>{111850A7-7D4F-983E-8659-FC61F20FBF37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="..\MyHazel\vendor\yaml">
+      <UniqueIdentifier>{6956601C-5550-896E-3EBD-1F7F2A56EFDA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\MyHazel\vendor\yaml-cpp">
+      <UniqueIdentifier>{F9C32168-E5D3-CD38-4E8D-32573ABCBCD1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="..\SandBox">
       <UniqueIdentifier>{1FF36A1D-0BAB-AC6A-74B2-85C66089475B}</UniqueIdentifier>
     </Filter>
@@ -41,6 +47,12 @@
     </None>
     <None Include="..\..\MyHazel\vendor\imgui\premake5.lua">
       <Filter>..\MyHazel\vendor\imgui</Filter>
+    </None>
+    <None Include="..\..\MyHazel\vendor\yaml-cpp\premake5.lua">
+      <Filter>..\MyHazel\vendor\yaml-cpp</Filter>
+    </None>
+    <None Include="..\..\MyHazel\vendor\yaml\premake5.lua">
+      <Filter>..\MyHazel\vendor\yaml</Filter>
     </None>
     <None Include="..\..\SandBox\premake5.lua">
       <Filter>..\SandBox</Filter>

@@ -1,12 +1,11 @@
 project "MyHazel"
-    location "MyHazel"
     kind "StaticLib"
     language "C++"
     cppdialect "C++17"
     staticruntime "on"
 
     targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
-    objdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
     pchheader "hzpch.h"
     pchsource "src/hzpch.cpp"
@@ -33,13 +32,15 @@ project "MyHazel"
         "%{IncludeDir.imgui}",
         "%{IncludeDir.glm}",
         "%{IncludeDir.stb_image}",
-        "%{IncludeDir.entt}"
+        "%{IncludeDir.entt}",
+        "%{IncludeDir.yaml_cpp}"
     }
     links
     {
         "ImGui",
         "Glad",
         "GLFW",
+        "yaml-cpp",
         "opengl32.lib"
     }
     filter "system:windows"
