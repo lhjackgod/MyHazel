@@ -11,6 +11,7 @@ namespace Hazel {
 	void SceneHierarchyPanel::SetContex(const Ref<Scene>& scene)
 	{
 		m_Contex = scene;
+		m_SelectionContex = {};
 	}
 	void SceneHierarchyPanel::OnImGuiRender()
 	{
