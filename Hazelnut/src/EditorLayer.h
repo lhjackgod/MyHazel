@@ -1,6 +1,7 @@
 #pragma once
 #include "Hazel.h"
 #include "Panels/SceneHierarchyPanel.h"
+#include "Hazel/Render/EditorCamera.h"
 namespace Hazel {
 	class EditorLayer : public Layer
 	{
@@ -31,6 +32,9 @@ namespace Hazel {
 		Entity m_SecondCamra;
 
 		bool m_PrimaryCamera = true;
+
+		EditorCamera m_EditorCamera;
+
 		Ref<Texture2D> m_CheckerboardTexture;
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec4 m_SquareColor = { 0.2f,0.3f,0.8f,1.0f };
