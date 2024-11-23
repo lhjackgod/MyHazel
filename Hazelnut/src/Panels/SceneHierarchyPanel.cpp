@@ -41,6 +41,10 @@ namespace Hazel {
 		}
 		ImGui::End();
 	}
+	void SceneHierarchyPanel::SetSelectedEntity(Entity entity)
+	{
+		m_SelectionContex = entity;
+	}
 	void SceneHierarchyPanel::DrawEntityNode(Entity entity)
 	{
 		auto& Tag = entity.GetComponent<TagComponent>().Tag;
