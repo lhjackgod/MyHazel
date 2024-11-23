@@ -209,7 +209,12 @@ namespace Hazel {
 		ImGui::End();
 		ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{ 0, 0 });
 		ImGui::Begin("Viewport");
-		auto viewPortOffset = ImGui::GetCursorPos(); // return the local coordination for the min window
+		auto viewportMinRegin = ImGui::GetWindowContentRegionMin();
+		auto viewportMaxRegin = ImGui::GetWindowContentRegionMax();
+		auto viewPortOffset = ImGui::GetWindowPos(); // return the local coordination for the min window
+		m_ViewportBounds[0] = { viewportMinRegin.x + viewPortOffset.x, viewportMinRegin.y + viewPortOffset.y };
+		m_ViewportBounds[1] = { viewportMaxRegin.x + viewPortOffset.x, viewportMaxRegin.y + viewPortOffset.y };
+		
 		m_ViewportFocused = ImGui::IsWindowFocused();
 		m_ViewportHovered = ImGui::IsWindowHovered();
 		Application::Get().GetImGuiLayer()->BlockEvents(!m_ViewportFocused && !m_ViewportHovered);
@@ -218,15 +223,6 @@ namespace Hazel {
 		uint64_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
 		ImGui::Image(reinterpret_cast<void*>(textureID), ImVec2{ m_ViewportSize.x, m_ViewportSize.y }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
 
-		auto windowSize = ImGui::GetWindowSize();
-		ImVec2 minBound = ImGui::GetWindowPos();
-
-		minBound.x += viewPortOffset.x;
-		minBound.y += viewPortOffset.y;
-
-		ImVec2 maxBound{ minBound.x + m_ViewportSize.x, minBound.y + m_ViewportSize.y };
-		m_ViewportBounds[0] = { minBound.x, minBound.y };
-		m_ViewportBounds[1] = { maxBound.x, maxBound.y };
 		// Gizmos
 		Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
 		if (selectedEntity && m_GizmoType != -1)
@@ -236,6 +232,8 @@ namespace Hazel {
 			float windowWidth = (float)ImGui::GetWindowWidth();
 			float windowHeight = (float)ImGui::GetWindowHeight();
 			ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
+			ImGuizmo::SetRect(m_ViewportBounds[0].x, m_ViewportBounds[0].y,
+				m_ViewportBounds[1].x - m_ViewportBounds[0].x, m_ViewportBounds[1].y - m_ViewportBounds[0].y);
 			// Camera
 			// Runtime camera from entity
 			// auto cameraEntity = m_ActiveScene->GetPrimaryCameraEntity();
