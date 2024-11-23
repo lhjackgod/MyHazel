@@ -1,9 +1,14 @@
-﻿  Framebuffer.cpp
-  OpenGLFramebuffer.cpp
-D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(83,72): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
-D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(89,73): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
-D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(101,91): warning C4267: “参数”: 从“size_t”转换到“uint32_t”，可能丢失数据
-D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(110,74): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(114,80): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(137,52): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
+﻿  Application.cpp
+  Buffer.cpp
+  Framebuffer.cpp
+  GraphicsContex.cpp
+  Renderer.cpp
+  Renderer2D.cpp
+  VertexArray.cpp
+  Scene.cpp
+  OpenGLVertexArray.cpp
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLVertexArray.cpp(82,34): warning C4312: “类型强制转换”: 从“const uint32_t”转换到更大的“const void *”
+D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLVertexArray.cpp(97,34): warning C4312: “类型强制转换”: 从“const uint32_t”转换到更大的“const void *”
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Render\Renderer2D.cpp(143,21): warning C4244: “初始化”: 从“__int64”转换到“uint32_t”，可能丢失数据
+D:\gameEngine\MyHazel\MyHazel\src\Hazel\Core\Application.cpp(85): warning C4715: “Hazel::Application::OnWindowResize”: 不是所有的控件路径都返回值
   MyHazel.vcxproj -> D:\gameEngine\MyHazel\bin\Debug-windows-x86_64\MyHazel\MyHazel.lib
