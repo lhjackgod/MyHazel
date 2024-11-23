@@ -1,4 +1,5 @@
-﻿  OpenGLFramebuffer.cpp
+﻿  Framebuffer.cpp
+  OpenGLFramebuffer.cpp
 D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(83,72): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
 D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(89,73): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
 D:\gameEngine\MyHazel\MyHazel\src\Platform\OpenGL\OpenGLFramebuffer.cpp(101,91): warning C4267: “参数”: 从“size_t”转换到“uint32_t”，可能丢失数据
